@@ -23,6 +23,7 @@ Date and Currency Formatting: Uses the Intl API for locale-based formatting.
 Sorting Transactions: Toggle sorting to view transactions in ascending or default order.
 
 
+
 **Built With**
 JavaScript 
 HTML5
