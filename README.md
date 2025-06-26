@@ -3,7 +3,7 @@
 A modern, interactive banking interface built with vanilla JavaScript, HTML, and CSS to simulate core banking features such as logging in, transferring funds, requesting loans, and closing accounts. This app uses date formatting, currency localization, and real-time UI updates to mimic real-world banking behavior.
 
 
-** Features**
+**Features**
 User Authentication: Users can log in using a unique username and PIN.
 
 Display Transactions: Each movement (deposit/withdrawal) is displayed with a formatted date and currency based on the user’s locale.
