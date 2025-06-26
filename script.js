@@ -109,11 +109,7 @@ const displayMovements = function (acc, sort = false) {
       if (daysPassed === 1) return "Yesterday";
       if (daysPassed <= 7) return `${daysPassed} days ago`;
 
-      // const now = new Date();
-      // const day = `${date.getDate()}`.padStart(2, "0");
-      // const month = `${date.getMonth() + 1}`.padStart(2, 0);
-      // const year = date.getFullYear();
-      // return `${day}/${month}/${year}`;
+    
       return new Intl.DateTimeFormat(locale).format(date);
     };
 
@@ -249,19 +245,13 @@ btnLogin.addEventListener("click", function (e) {
       year: "numeric",
       // weekday: "long",
     };
-    // const locale = navigator.language;
-    // console.log(locale);
+   
 
     labelDate.textContent = new Intl.DateTimeFormat(
       currentAccount.locale,
       options
     ).format(now);
-    // const day = `${now.getDate()}`.padStart(2, 0);
-    // const month = `${now.getMonth() + 1}`.padStart(2, 0);
-    // const year = now.getFullYear();
-    // const hour = `${now.getHours()}`.padStart(2, 0);
-    // const min = `${now.getMinutes()}`.padStart(2, 0);
-    // labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = "";
@@ -366,198 +356,4 @@ btnSort.addEventListener("click", function (e) {
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-// LECTURES & PRACTICE
-/*
-console.log(23 === 23.0);
-console.log(0.1 + 0.2);
-console.log(0.1 + 0.2 === 0.3);
 
-//Conversion
-console.log(Number("23"));
-console.log(+"23");
-
-//Parsing
-console.log(Number.parseInt("30px", 10));
-console.log(Number.parseInt("e30"));
-
-console.log(Number.parseInt("  2.5rem  "));
-console.log(Number.parseFloat("  2.5rem  "));
-
-//Check if Value is NaN
-console.log(Number.isNaN(20));
-console.log(Number.isNaN("20"));
-console.log(Number.isNaN(+"20X"));
-console.log(Number.isNaN(23 / 0));
-
-console.log(Number.isFinite(20));
-console.log(Number.isFinite("20"));
-console.log(Number.isFinite(+"20X"));
-console.log(Number.isFinite(23 / 0));
-
-console.log(Number.isInteger(23));
-console.log(Number.isInteger(23.0));
-console.log(Number.isInteger(23 / 0));
-*/
-
-/*
-console.log(Math.sqrt(25));
-console.log(25 ** (1 / 2));
-console.log(8 ** (1 / 3));
-
-console.log(Math.max(5, 18, 23, 11, 2));
-console.log(Math.max(5, 18, "23", 11, 2));
-console.log(Math.max(5, 18, "23px", 11, 2));
-
-console.log(Math.min(5, 18, 23, 11, 2));
-
-console.log(Math.PI * Number.parseFloat("10px") ** 2);
-
-console.log(Math.trunc(Math.random() * 6) + 1);
-
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min) + 1) + min;
-// console.log(randomInt(10, 20));
-
-//Rounding Integers
-console.log(Math.trunc(23.3));
-
-console.log(Math.round(23.9));
-console.log(Math.round(23.9));
-
-console.log(Math.ceil(23.9));
-console.log(Math.ceil(23.9));
-
-console.log(Math.floor(23.9));
-console.log(Math.floor(23.9));
-
-//Rounding Decimals
-console.log((2.7).toFixed(0));
-console.log((2.7).toFixed(3));
-console.log((2.345).toFixed(2));
-console.log(+(2.354).toFixed(2));
-*/
-
-/*
-console.log(5 % 2);
-console.log(5 / 2);
-console.log(8 % 3);
-
-const isEven = (n) => n % 2 === 0;
-console.log(isEven(8));
-console.log(isEven(23));
-console.log(isEven(514));
-
-labelBalance.addEventListener("click", function () {
-  [...document.querySelectorAll(".movements__row")].forEach(function (row, i) {
-    if (i % 6 === 0)
-      row.style.backgroundColor = "purple"; // Handles multiples of both 2 and 3
-    else if (i % 2 === 0) row.style.backgroundColor = "orangered";
-    else if (i % 3 === 0) row.style.backgroundColor = "blue";
-  });
-});
-*/
-
-/*
-const diameter = 287_460_000_000;
-console.log(diameter);
-
-const priceCents = 345_99;
-console.log(priceCents);
-
-const transferFee = 15_00;
-
-const PI = 3.1415;
-console.log(PI);
-
-console.log(Number("230000"));
-*/
-
-/*
-console.log(2 ** 53 - 1);
-console.log(Number.MAX_SAFE_INTEGER);
-console.log(2 ** 53 + 5);
-
-console.log(4373764332377373737373737373437n);
-
-//Operations
-console.log(1000n * 1000n);
-console.log(368549494844949494949494n * 1000000n);
-*/
-
-//Create a date
-// const now = new Date();
-// console.log(now);
-
-// console.log(new Date("December 2, 2021"));
-// console.log(new Date(account1.movementsDates[0]));
-
-// console.log(new Date(2037, 10, 19, 15, 23, 5));
-// console.log(new Date(2037, 10, 31));
-
-// console.log(new Date(0));
-// console.log(new Date(3 * 24 * 60 * 60 * 1000));
-// console.log(3 * 24 * 60 * 60 * 1000);
-
-//Working with dates
-// const future = new Date(2037, 10, 19, 15, 23);
-// console.log(future);
-// console.log(future.getFullYear());
-// console.log(future.getMonth());
-// console.log(future.getDate());
-// console.log(future.getDay());
-// console.log(future.getHours());
-// console.log(future.getMinutes());
-// console.log(future.getSeconds());
-// console.log(future.toISOString());
-// console.log(future.getTime());
-
-// console.log(Date.now());
-
-// future.setFullYear(2040);
-// console.log(future);
-/*
-const future = new Date(2037, 10, 19, 15, 23);
-console.log(+future);
-
-const calcDaysPassed = (date1, date2) =>
-  Math.abs((date2 - date1) / (1000 * 60 * 60 * 24));
-
-const days1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 3, 4));
-console.log(days1);
-*/
-
-/*
-const num = 3884764.23;
-
-const options = {
-  style: "currency",
-  unit: "mile-per-hour",
-  currency: "EUR",
-};
-
-console.log("US:   ", new Intl.NumberFormat("en-US", options).format(num));
-console.log("Gemany:    ", new Intl.NumberFormat("de-DE", options).format(num));
-console.log("Syria:    ", new Intl.NumberFormat("ar-SY", options).format(num));
-console.log(
-  "Browser:    ",
-  new Intl.NumberFormat(navigator.language, options).format(num)
-);
-*/
-
-/*
-const ingredients = ["olives", "spinach"];
-const pizzaTimer = setTimeout(
-  (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
-  3000,
-  ...ingredients
-);
-console.log("Waiting...");
-
-if (ingredients.includes("spinach")) clearTimeout(pizzaTimer);
-
-//Set Timeout
-setInterval(function () {
-  const now = new Date();
-  // console.log(now);
-}, 1000);
-*/
